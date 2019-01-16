@@ -1,0 +1,31 @@
+tpi1
+15m
+circle
+C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi1.tif
+
+tpi2
+30m
+circle
+"C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi2.tif
+
+
+
+tpi_wc10r <- tpi(wc_elev, scale = 10, win = "rectangle", normalize = FALSE)
+writeRaster(tpi_wc10r, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi10r.tif", format="GTiff", overwrite=TRUE)
+tpi_wc25r <- tpi(wc_elev, scale = 25, win = "rectangle", normalize = FALSE)
+writeRaster(tpi_wc25r, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi25r.tif", format="GTiff", overwrite=TRUE)
+tpi_wc50r <- tpi(wc_elev, scale = 50, win = "rectangle", normalize = FALSE)
+writeRaster(tpi_wc50r, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi50r.tif", format="GTiff", overwrite=TRUE)
+tpi_wc100r <- tpi(wc_elev, scale = 100, win = "rectangle", normalize = FALSE)
+writeRaster(tpi_wc100r, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi100r.tif", format="GTiff", overwrite=TRUE)
+tpi_wc10c <- tpi(wc_elev, scale = 10, win = "circle", normalize = FALSE)
+writeRaster(tpi_wc10c, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi10c.tif", format="GTiff", overwrite=TRUE)
+tpi_wc25c <- tpi(wc_elev, scale = 25, win = "circle", normalize = FALSE)
+writeRaster(tpi_wc25c, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi25c.tif", format="GTiff", overwrite=TRUE)
+tpi_wc50c <- tpi(wc_elev, scale = 50, win = "circle", normalize = FALSE)
+writeRaster(tpi_wc50c, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi50c.tif", format="GTiff", overwrite=TRUE)
+tpi_wc100c <- tpi(wc_elev, scale = 100, win = "circle", normalize = FALSE)
+writeRaster(tpi_wc100c, "C:/Kelsey/Fall_Sem/WC/Sept_2014/tpi_p/wc_s14_tpi100c.tif", format="GTiff", overwrite=TRUE)
+
+system.time(tpi_wc <- tpi(wc_elev, scale = 15, win = "circle", normalize = FALSE))
+system.time(tpi_wc <- tpi(wc_elev, scale = 10, win = "circle", normalize = FALSE))
